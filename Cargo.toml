@@ -1,0 +1,19 @@
+[package]
+name = "tcp-client-addr"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Identify TCP clients directly or via trusted PROXY protocol peers"
+license = "MIT"
+repository = "https://github.com/pubky/tcp-client-addr"
+keywords = ["proxy-protocol", "client-ip", "tcp", "tokio"]
+categories = ["network-programming"]
+
+[dependencies]
+ipnet = "2"
+ppp = "2.3"
+thiserror = "2"
+tokio = { version = "1", features = ["io-util", "net", "time"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["io-util", "net", "macros", "rt", "time"] }
